@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a0a;
+  --color-surface: #111111;
+  --color-surface-2: #1a1a1a;
+  --color-gold: #C9A84C;
+  --color-gold-light: #E8C97A;
+  --color-gold-dark: #9A7A32;
+  --color-text: #F5F0E8;
+  --color-text-muted: #8A8580;
+  --color-border-gold: rgba(201, 168, 76, 0.2);
+
+  --font-display: var(--font-display), "Playfair Display", serif;
+  --font-sans: var(--font-sans), "DM Sans", sans-serif;
+  --font-accent: var(--font-accent), "Bebas Neue", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* standard navigation header height offset */
+}
+
+/* Custom Base Styles for Luxury Dark Aesthetics */
+@layer base {
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Subtitle text styles */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom Utility Classes for Luxury Glass and Shimmer */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #E8C97A 0%, #C9A84C 50%, #9A7A32 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border {
+  border: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(201, 168, 76, 0.15);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 0 35px rgba(201, 168, 76, 0.35);
+  border-color: rgba(232, 201, 122, 0.5);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(201, 168, 76, 0.4) 50%, transparent 100%);
+}
+
+.lux-glass {
+  background: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+/* Custom scrollbar for absolute visual polish */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border: 2px solid #0a0a0a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A84C;
+}
+
+/* Text selections matching the theme color */
+::selection {
+  background: rgba(201, 168, 76, 0.25);
+  color: #F5F0E8;
+}
+
+/* ==========================================================
+   GOLDEN SWEPING BUTTON SHIMMER & CLICK INTERACTIONS
+   ========================================================== */
+
+/* Target anchors styled like gold buttons, and standard action buttons */
+button,
+a[class*="bg-[#C9A84C]"],
+button[class*="bg-[#C9A84C]"],
+a[class*="border-[#C9A84C]"],
+button[class*="border-[#C9A84C]"] {
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease !important;
+}
+
+/* Gold shimmer sweeping pseudo translation */
+button::after,
+a[class*="bg-[#C9A84C]"]::after,
+button[class*="bg-[#C9A84C]"]::after,
+a[class*="border-[#C9A84C]"]::after,
+button[class*="border-[#C9A84C]"]::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.22) 50%,
+    transparent 100%
+  ) !important;
+  transform: translateX(-100%) skewX(-15deg) !important;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  pointer-events: none !important;
+}
+
+/* Trigger shimmer move on hover state */
+button:hover::after,
+a[class*="bg-[#C9A84C]"]:hover::after,
+button[class*="bg-[#C9A84C]"]:hover::after,
+a[class*="border-[#C9A84C]"]:hover::after,
+button[class*="border-[#C9A84C]"]:hover::after {
+  transform: translateX(200%) skewX(-15deg) !important;
+}
+
+/* Tactile pressing click down */
+button:active,
+a[class*="bg-[#C9A84C]"]:active,
+button[class*="bg-[#C9A84C]"]:active,
+a[class*="border-[#C9A84C]"]:active,
+button[class*="border-[#C9A84C]"]:active {
+  transform: scale(0.97) !important;
+}
+
+/* Specifically prevent double animations for elements inside motion grids */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1s !important;
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+

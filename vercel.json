@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "redirects": [
+    {
+      "source": "/facebook",
+      "destination": "https://www.facebook.com/Theexecutivedetailer/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.theexecutiveimage.com"
+        }
+      ],
+      "destination": "https://theexecutiveimage.com/:path*",
+      "permanent": true
+    }
+  ]
+}
