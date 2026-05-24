@@ -26,35 +26,26 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://theexecutiveimage.com'),
+  metadataBase: new URL(process.env.APP_URL || 'https://the-executivedetailer.vercel.app/'),
   title: 'The Executive Image | Ceramic Coating & Mobile Detailing — Treasure Coast, FL',
   description: "Stuart, FL's premier mobile ceramic coating and detailing service. Automotive, Marine & Aeronautical. We come to you. Call Jason at (772) 631-1339.",
   keywords: 'ceramic coating stuart fl, mobile detailing treasure coast, boat detailing port st lucie, paint correction stuart florida, executive image detailing',
   authors: [{ name: 'Jason', url: 'https://www.facebook.com/Theexecutivedetailer/' }],
   alternates: {
-    canonical: 'https://theexecutiveimage.com',
+    canonical: 'https://the-executivedetailer.vercel.app/',
   },
   openGraph: {
     title: 'The Executive Image | Ceramic Coating & Mobile Detailing — Treasure Coast, FL',
     description: "Stuart, FL's premier mobile ceramic coating and detailing service. Automotive, Marine & Aeronautical. We come to you. Call Jason at (772) 631-1339.",
-    url: 'https://theexecutiveimage.com',
+    url: 'https://the-executivedetailer.vercel.app/',
     siteName: 'The Executive Image',
     locale: 'en_US',
     type: 'website',
-    images: [
-      {
-        url: 'https://theexecutiveimage.com/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'The Executive Image Ceramic Coating & Mobile Detailing',
-      }
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'The Executive Image | Ceramic Coating & Mobile Detailing — Treasure Coast, FL',
     description: "Stuart, FL's premier mobile ceramic coating and detailing service. Automotive, Marine & Aeronautical. We come to you. Call Jason at (772) 631-1339.",
-    images: ['https://theexecutiveimage.com/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -74,14 +65,14 @@ const schemaJson = {
   "@type": "LocalBusiness",
   "name": "The Executive Image Ceramic Coating & Mobile Detailing",
   "telephone": "+17726311339",
-  "image": "https://theexecutiveimage.com/og-image.jpg",
+  "image": "https://the-executivedetailer.vercel.app/og-image.jpg",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Stuart",
     "addressRegion": "FL"
   },
   "areaServed": ["Stuart", "Port St. Lucie", "Jensen Beach", "Treasure Coast"],
-  "url": "https://theexecutiveimage.com",
+  "url": "https://the-executivedetailer.vercel.app/",
   "sameAs": ["https://www.facebook.com/Theexecutivedetailer/"]
 };
 
