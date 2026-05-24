@@ -7,15 +7,12 @@ import ContactForm from "@/components/sections/ContactForm";
 import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/layout/Footer";
 import MobileStickyBar from "@/components/ui/MobileStickyBar";
-import FloatingCTA from "@/components/ui/FloatingCTA";
-import CustomCursor from "@/components/ui/CustomCursor";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 
 export default function Home() {
   return (
     <>
       <ScrollProgress />
-      <CustomCursor />
       <Navbar />
       <main>
         <Hero id="hero" />
@@ -27,7 +24,6 @@ export default function Home() {
       </main>
       <Footer />
       <MobileStickyBar />
-      <FloatingCTA />
     </>
   );
 }

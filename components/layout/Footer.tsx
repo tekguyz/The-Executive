@@ -1,31 +1,8 @@
 import Link from "next/link";
-import { Phone, Facebook, Mail, MapPin, ChevronRight, ShieldCheck } from "lucide-react";
+import { Phone, Facebook, ChevronRight } from "lucide-react";
 import { SITE_INFO } from "@/lib/constants";
-
-// The same custom Diamond / Shield Icon as Navbar for cohesive brand identification
-const DiamondShieldIcon = ({ className }: { className?: string }) => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-    id="footer_diamond_svg"
-  >
-    <path
-      d="M12 2L3 7V12C3 18 12 22 12 22C12 22 21 18 21 12V7L12 2Z"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M12 5.5L6.5 11.2V13.8C6.5 16.5 12 19.5 12 19.5C12 19.5 17.5 16.5 17.5 13.8V11.2L12 5.5Z"
-      fill="currentColor"
-      fillOpacity="0.3"
-      stroke="currentColor"
-      strokeWidth="1.2"
-    />
-  </svg>
-);
+import DiamondShieldIcon from "./footer/DiamondShieldIcon";
+import AreasServed from "./footer/AreasServed";
 
 export default function Footer() {
   const navLinks = [
@@ -54,7 +31,7 @@ export default function Footer() {
             {/* Logo */}
             <Link href="/" id="footer_logo_identity" className="flex items-center gap-3 group">
               <div className="relative w-10 h-10 border border-[#C9A84C]/45 bg-[#111] rounded flex items-center justify-center transition-transform group-hover:scale-105">
-                <DiamondShieldIcon className="w-6 h-6 text-[#C9A84C]" />
+                <DiamondShieldIcon className="w-6 h-6 text-[#C9A84C]" id="footer_diamond_svg" />
                 <div className="absolute -inset-0.5 rounded border border-[#C9A84C]/25 opacity-0 group-hover:opacity-100 transition-opacity blur-sm" />
               </div>
               
@@ -62,7 +39,7 @@ export default function Footer() {
                 <span className="font-display font-medium text-base sm:text-lg tracking-wide text-[#F5F0E8] leading-[1.2]">
                   The Executive Image
                 </span>
-                <span className="font-sans text-[8px] sm:text-[9px] tracking-[0.15em] text-[#C9A84C] leading-none uppercase mt-0.5 font-light font-bold">
+                <span className="font-sans text-[8px] sm:text-[9px] tracking-[0.15em] text-[#C9A84C] leading-none uppercase mt-0.5 font-bold">
                   Ceramic Coating & Detailing
                 </span>
               </div>
@@ -145,56 +122,7 @@ export default function Footer() {
           </div>
 
           {/* COLUMN 4 : Service Areas & Contacts */}
-          <div className="lg:col-span-3 flex flex-col gap-6">
-            <h4 className="font-accent text-[#C9A84C] text-[10px] sm:text-[11px] tracking-[0.25em] uppercase font-bold">
-              AREAS SERVED &amp; CONTACT
-            </h4>
-
-            <div className="flex flex-col gap-5">
-              
-              {/* Areas listed */}
-              <div className="grid grid-cols-2 gap-x-2 gap-y-2 text-[11px] text-[#8A8580] font-light">
-                {[
-                  { name: "Stuart, FL", active: true },
-                  { name: "Port St. Lucie" },
-                  { name: "Jensen Beach" },
-                  { name: "Palm City" },
-                  { name: "Hobe Sound" },
-                  { name: "Fort Pierce" }
-                ].map((item) => (
-                  <span key={item.name} className="flex items-center gap-1.5 leading-none">
-                    <MapPin className="w-3.5 h-3.5 text-[#C9A84C]/50 shrink-0" />
-                    <span className={item.active ? "text-white font-medium" : "text-[#8A8580]"}>{item.name}</span>
-                  </span>
-                ))}
-              </div>
-
-              <p className="text-xs text-[#8A8580] font-light leading-relaxed">
-                Proudly serving Stuart, Port St. Lucie, Jensen Beach, Palm City, Hobe Sound, Fort Pierce &amp; the entire Treasure Coast.
-              </p>
-
-              {/* Direct Mail */}
-              <div className="pt-2 border-t border-white/[0.03]">
-                <span className="text-[9px] font-accent text-[#C9A84C] uppercase tracking-widest block font-bold mb-1.5">EMAIL ENQUIRIES</span>
-                <a 
-                  href="mailto:info@theexecutiveimage.com"
-                  id="footer_email_link"
-                  className="text-xs text-white hover:text-[#C9A84C] transition-all font-medium flex items-center gap-2"
-                >
-                  <Mail className="w-3.5 h-3.5 text-[#C9A84C]/85" />
-                  <span>info@theexecutiveimage.com</span>
-                </a>
-              </div>
-
-              {/* Credentials badge inside column */}
-              <div className="p-2.5 bg-[#111] rounded-lg border border-white/[0.02] flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#C9A84C]" />
-                <span className="text-[10px] text-[#8a8580] leading-none font-light">17+ Years Master Craftsmanship</span>
-              </div>
-
-            </div>
-
-          </div>
+          <AreasServed />
 
         </div>
 

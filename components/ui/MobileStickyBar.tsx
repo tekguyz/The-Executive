@@ -27,7 +27,7 @@ export default function MobileStickyBar() {
   return (
     <div 
       id="mobile_sticky_cta_panel"
-      className="lg:hidden fixed bottom-3 left-3 right-3 bg-[#0e0e0ed9] backdrop-blur-md border border-[#C9A84C]/35 rounded-xl z-[100] p-2.5 shadow-[0_12px_45px_rgba(0,0,0,0.9)] flex items-center justify-between gap-2.5 transition-all duration-300"
+      className="md:hidden fixed bottom-3 left-3 right-3 bg-[#0e0e0ed9] backdrop-blur-md border border-[#C9A84C]/35 rounded-xl z-[100] p-2.5 shadow-[0_12px_45px_rgba(0,0,0,0.9)] flex items-center justify-between gap-2.5 transition-all duration-300"
     >
       {/* Phone shortcut button */}
       <a
