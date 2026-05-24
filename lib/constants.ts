@@ -26,7 +26,6 @@ export interface ServiceItem {
   subtitle: string;
   description: string;
   features: string[];
-  priceFrom: string;
   badge: string | null;
 }
 
@@ -37,7 +36,6 @@ export const SERVICES: ServiceItem[] = [
     subtitle: "Ultimate Paint Protection",
     description: "Industry-leading ceramic coating that chemically bonds to your paint, providing years of protection against UV damage, oxidation, water spots, and environmental contaminants. Delivers a deep, mirror-like gloss that turns heads.",
     features: ["5-9H Hardness Rating", "UV & Oxidation Protection", "Hydrophobic Surface", "2-5 Year Warranty"],
-    priceFrom: "From $799",
     badge: "Most Popular"
   },
   {
@@ -46,7 +44,6 @@ export const SERVICES: ServiceItem[] = [
     subtitle: "Restore the Showroom Shine",
     description: "Remove swirl marks, scratches, water spots, and oxidation using professional-grade polishing techniques. Reveals the true depth and clarity of your paint before any protective coating is applied.",
     features: ["1, 2 & 3-Stage Correction", "Swirl & Scratch Removal", "Oxidation Treatment", "Pre-Coating Prep"],
-    priceFrom: "From $350",
     badge: null
   },
   {
@@ -55,7 +52,6 @@ export const SERVICES: ServiceItem[] = [
     subtitle: "We Come To You",
     description: "Full-service interior and exterior detailing delivered directly to your home, office, marina, or hangar. Save time without sacrificing quality — we bring the complete detail experience to your door.",
     features: ["Interior Deep Clean", "Exterior Hand Wash & Wax", "Leather Conditioning", "Engine Bay Detailing"],
-    priceFrom: "From $149",
     badge: null
   },
   {
@@ -64,7 +60,6 @@ export const SERVICES: ServiceItem[] = [
     subtitle: "Boats & Watercraft",
     description: "Specialized detailing and ceramic coating for boats, yachts, and watercraft. Combat salt air, UV exposure, and marine oxidation with treatments specifically formulated for gelcoat and marine finishes.",
     features: ["Gelcoat Restoration", "Hull Oxidation Removal", "Marine Ceramic Coating", "Teak Treatment"],
-    priceFrom: "From $299",
     badge: "Specialty"
   },
   {
@@ -73,7 +68,6 @@ export const SERVICES: ServiceItem[] = [
     subtitle: "Aircraft & Aviation",
     description: "Premium detailing services for aircraft, helicopters, and private jets. Protect your aviation investment against harsh atmospheric conditions with professional-grade coatings and meticulous attention to detail.",
     features: ["Aviation-Grade Products", "Aluminum & Composite Safe", "Ceramic Coating", "Interior Cabin Detailing"],
-    priceFrom: "Custom Quote",
     badge: "Exclusive"
   },
   {
@@ -82,7 +76,6 @@ export const SERVICES: ServiceItem[] = [
     subtitle: "Clarity & Safety",
     description: "Restore yellowed, foggy headlights to crystal-clear condition. Improve nighttime visibility and road safety while dramatically improving the appearance of your vehicle.",
     features: ["UV Sanding Process", "Polish & Seal", "UV Protective Coating", "Same-Day Service"],
-    priceFrom: "From $79",
     badge: null
   }
 ];

@@ -41,7 +41,6 @@ interface ServiceType {
   subtitle: string;
   description: string;
   features: string[];
-  priceFrom: string;
   icon: string;
   badge: string | null;
 }
@@ -117,21 +116,14 @@ export default function ServiceCard({ service }: ServiceCardProps) {
           </ul>
         </div>
 
-        {/* Bottom Panel: Price starter and Quote Action */}
-        <div className="border-t border-white/[0.04] pt-5 flex items-center justify-between w-full mt-auto">
-          <div>
-            <span className="text-[8px] font-accent text-[#8A8580] tracking-wider uppercase block">Pricing Tier</span>
-            <span className="text-[15px] font-display font-semibold text-[#F5F0E8] tracking-wide">
-              {service.priceFrom}
-            </span>
-          </div>
-
+        {/* Bottom Panel: Quote Action */}
+        <div className="border-t border-white/[0.04] pt-5 w-full mt-auto">
           <Link
             href="#contact"
             id={`service_card_cta_${originalIndex}`}
-            className="px-4 py-2.5 text-[9px] font-accent tracking-widest uppercase text-[#C9A84C] border border-[#C9A84C]/35 hover:bg-[#C9A84C] hover:text-[#0a0a0a] transition-all duration-300 rounded font-bold"
+            className="block w-full text-center py-2.5 text-[9px] font-accent tracking-widest uppercase text-[#C9A84C] border border-[#C9A84C]/35 hover:bg-[#C9A84C] hover:text-[#0a0a0a] transition-all duration-300 rounded font-bold"
           >
-            Get a Quote
+            Get a Free Quote
           </Link>
         </div>
 
