@@ -5,6 +5,7 @@ import { X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { SITE_INFO } from "@/lib/constants";
 import DiamondShieldIcon from "../footer/DiamondShieldIcon";
+import SocialLinks from "../../ui/SocialLinks";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -38,7 +39,7 @@ export default function MobileMenu({ isOpen, setIsOpen, isActive, navLinks }: Mo
                     The Executive Image
                   </span>
                   <span className="font-sans text-[8px] tracking-[0.12em] text-[#C9A84C] leading-none uppercase mt-0.5 text-left font-bold">
-                    Ceramic Coating & Mobile Detailing
+                    Ceramic Coating & Detailing
                   </span>
                 </div>
               </div>
@@ -77,6 +78,17 @@ export default function MobileMenu({ isOpen, setIsOpen, isActive, navLinks }: Mo
                   </motion.div>
                 );
               })}
+              
+              {/* Social links + Phone number after nav links */}
+              <div className="mt-6">
+                <SocialLinks size="md" />
+                <a
+                  href="tel:+17726311339"
+                  className="block mt-4 text-lg font-semibold text-[#C9A84C]"
+                >
+                  (772) 631-1339
+                </a>
+              </div>
             </nav>
           </div>
 

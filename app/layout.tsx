@@ -26,6 +26,7 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://theexecutiveimage.com'),
   title: 'The Executive Image | Ceramic Coating & Mobile Detailing — Treasure Coast, FL',
   description: "Stuart, FL's premier mobile ceramic coating and detailing service. Automotive, Marine & Aeronautical. We come to you. Call Jason at (772) 631-1339.",
   keywords: 'ceramic coating stuart fl, mobile detailing treasure coast, boat detailing port st lucie, paint correction stuart florida, executive image detailing',

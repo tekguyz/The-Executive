@@ -57,8 +57,22 @@ export default function Testimonials({ id = "reviews" }: SectionProps) {
             WHAT OUR CLIENTS SAY
           </p>
           <h2 className="text-3xl sm:text-4xl font-display font-medium text-[#F5F0E8] leading-tight tracking-tight">
-            Trusted by Treasure Coast Owners
+            Trusted by Treasure Coast Vehicle Owners
           </h2>
+          
+          {/* Google review count callout */}
+          <div className="flex items-center justify-center gap-2 mt-4 mb-4">
+            <div className="flex text-[#C9A84C] text-lg">★★★★★</div>
+            <span className="text-white font-semibold">5.0</span>
+            <span className="text-[#8A8580] text-sm">· 100+ Google Reviews</span>
+            <a href="https://maps.app.goo.gl/vY93yVHhBPNxQiAW6"
+               target="_blank" rel="noopener noreferrer"
+               className="text-xs text-[#C9A84C] underline underline-offset-2 
+               hover:text-white transition-colors ml-1">
+              See on Google ↗
+            </a>
+          </div>
+
           <div className="w-12 h-[1px] bg-[#C9A84C]/50 my-1"></div>
           <p className="text-xs sm:text-sm text-[#8A8580] font-light leading-relaxed max-w-2xl">
             From daily drivers to boats to aero fleet units — our pristine custom reputation is forged with surgical care, one investment at a time.
@@ -83,21 +97,21 @@ export default function Testimonials({ id = "reviews" }: SectionProps) {
         />
 
         {/* REPUTATION ACTION CTA BOTTOM ZONE */}
-        <div className="mt-16 text-center">
-          <p className="text-lg font-semibold text-white mb-2">
-            Join hundreds of satisfied Treasure Coast vehicle owners.
+        <div className="text-center mt-16">
+          <p className="text-lg font-semibold text-white mb-6">
+            Join 101 five-star customers on the Treasure Coast.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <a 
-              href="tel:+17726311339" 
-              className="px-6 py-3 bg-[#C9A84C] hover:bg-[#E8C97A] text-[#0a0a0a] text-xs font-accent tracking-widest uppercase rounded font-bold transition-all"
-            >
+            <a href="tel:+17726311339"
+               className="inline-flex items-center gap-2 px-6 py-3 
+               bg-[#C9A84C] text-[#0a0a0a] font-semibold text-sm 
+               rounded-sm hover:bg-[#E8C97A] transition-colors font-sans">
               Call (772) 631-1339
             </a>
-            <a 
-              href="#contact" 
-              className="px-6 py-3 border border-[#C9A84C] text-[#C9A84C] hover:bg-[#C9A84C] hover:text-black text-xs font-accent tracking-widest uppercase rounded font-bold transition-all relative z-10"
-            >
+            <a href="#contact"
+               className="inline-flex items-center gap-2 px-6 py-3 
+               border border-[#C9A84C] text-[#C9A84C] font-semibold text-sm 
+               rounded-sm hover:bg-[rgba(201,168,76,0.08)] transition-colors font-sans relative z-10">
               Book Online
             </a>
           </div>

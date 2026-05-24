@@ -1,5 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
+import SocialProofBar from "@/components/ui/SocialProofBar";
 import Services from "@/components/sections/Services";
 import About from "@/components/sections/About";
 import Testimonials from "@/components/sections/Testimonials";
@@ -8,14 +9,17 @@ import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/layout/Footer";
 import MobileStickyBar from "@/components/ui/MobileStickyBar";
 import ScrollProgress from "@/components/ui/ScrollProgress";
+import ScrollReset from "@/components/ui/ScrollReset";
 
 export default function Home() {
   return (
     <>
+      <ScrollReset />
       <ScrollProgress />
       <Navbar />
       <main>
         <Hero id="hero" />
+        <SocialProofBar />
         <Services id="services" />
         <About id="about" />
         <Testimonials id="reviews" />

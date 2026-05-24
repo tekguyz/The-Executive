@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "motion/react";
-import { ChevronDown, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import HeroBackground from "./hero/HeroBackground";
 
 interface SectionProps {
@@ -82,25 +81,27 @@ export default function Hero({ id = "hero" }: SectionProps) {
             initial={{ y: 25, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.75, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-8 sm:mt-10 w-full sm:w-auto"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-8 sm:mt-10 w-full sm:w-auto z-10"
             id="hero_cta_buttons_group"
           >
-            <Link
+            {/* Primary Gold CTA */}
+            <a
               href="#contact"
               id="hero_cta_book"
-              className="px-8 py-3.5 sm:py-4 bg-[#C9A84C] hover:bg-[#E8C97A] text-[#0a0a0a] font-sans tracking-widest text-xs uppercase rounded transition-colors shadow-lg shadow-[#C9A84C]/15 flex items-center justify-center gap-2 font-medium"
+              className="px-9 py-4 bg-[#C9A84C] hover:bg-[#E8C97A] text-[#0a0a0a] font-sans tracking-widest text-xs uppercase rounded transition-colors shadow-lg shadow-[#C9A84C]/15 flex items-center justify-center gap-2 font-bold"
             >
-              <span>Book Your Detail</span>
+              <span>Get a Free Quote</span>
               <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
+            </a>
 
-            <Link
-              href="#services"
+            {/* Secondary Outline CTA */}
+            <a
+              href="tel:+17726311339"
               id="hero_cta_work"
-              className="px-8 py-3.5 sm:py-4 border border-[#C9A84C]/60 hover:border-[#C9A84C] text-[#F5F0E8] hover:bg-white/[0.03] font-sans tracking-widest text-xs uppercase rounded transition-all flex items-center justify-center gap-2"
+              className="px-8 py-4 border border-[#C9A84C]/60 hover:border-[#C9A84C] text-[#C9A84C] hover:bg-[#C9A84C]/10 font-sans tracking-widest text-xs uppercase rounded transition-all flex items-center justify-center gap-2 font-bold"
             >
-              <span>See Our Work</span>
-            </Link>
+              <span>Call (772) 631-1339</span>
+            </a>
           </motion.div>
 
           {/* THREE METICULOUS TRUST BADGES */}
@@ -138,27 +139,6 @@ export default function Hero({ id = "hero" }: SectionProps) {
 
       {/* SUBTLE BOTTOM EDGE SMOOTH TRANSITION COMPONENT */}
       <div className="absolute bottom-0 left-0 w-full h-28 bg-gradient-to-t from-[#0a0a0a] to-transparent pointer-events-none z-10" />
-
-      {/* BOUNCING SCROLL INDICATOR */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
-        <Link 
-          href="#services" 
-          id="hero_bouncing_scroll_indicator" 
-          className="flex flex-col items-center gap-1 group"
-          aria-label="Scroll to services"
-        >
-          <span className="text-[9px] font-accent tracking-[0.3em] uppercase text-[#8A8580] group-hover:text-[#C9A84C] transition-colors">
-            Scroll
-          </span>
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
-            className="text-[#C9A84C] group-hover:text-[#E8C97A] transition-colors"
-          >
-            <ChevronDown className="w-5 h-5" />
-          </motion.div>
-        </Link>
-      </div>
     </section>
   );
 }

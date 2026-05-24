@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { Phone, Facebook, ChevronRight } from "lucide-react";
+import { Phone, ChevronRight } from "lucide-react";
 import { SITE_INFO } from "@/lib/constants";
 import DiamondShieldIcon from "./footer/DiamondShieldIcon";
 import AreasServed from "./footer/AreasServed";
+import SocialLinks from "../ui/SocialLinks";
 
 export default function Footer() {
   const navLinks = [
@@ -49,6 +50,26 @@ export default function Footer() {
               Treasure Coast&apos;s Premier Ceramic Coating &amp; Mobile Detailing Service. Bringing paint polishing, marine gelcoat de-oxidation, and aviation canopy restoration directly to you.
             </p>
 
+            {/* Social Links added from FIX 7 */}
+            <div>
+              <p className="text-xs uppercase tracking-[0.3em] text-[#8A8580] mb-3 mt-6 font-bold">
+                Follow Our Work
+              </p>
+              <SocialLinks size="md" />
+              <div className="mt-3 space-y-1">
+                <a href="https://www.facebook.com/Theexecutivedetailer/"
+                   target="_blank" rel="noopener noreferrer"
+                   className="block text-xs text-[#8A8580] hover:text-[#C9A84C] transition-colors">
+                  facebook.com/Theexecutivedetailer
+                </a>
+                <a href="https://www.instagram.com/theexecutiveimage/"
+                   target="_blank" rel="noopener noreferrer"
+                   className="block text-xs text-[#8A8580] hover:text-[#C9A84C] transition-colors">
+                  instagram.com/theexecutiveimage
+                </a>
+              </div>
+            </div>
+
             <div className="flex flex-col gap-2">
               <span className="text-[9px] font-accent text-[#C9A84C] uppercase tracking-widest block font-bold">Direct Hotline</span>
               <a 
@@ -58,21 +79,6 @@ export default function Footer() {
               >
                 {SITE_INFO.phone}
               </a>
-            </div>
-
-            {/* Social Panel */}
-            <div className="flex items-center gap-3">
-              <a
-                href="https://www.facebook.com/Theexecutivedetailer/"
-                target="_blank"
-                rel="noopener noreferrer"
-                id="footer_facebook_icon"
-                className="w-9 h-9 rounded-full bg-white/[0.02] border border-white/[0.05] hover:border-[#C9A84C]/40 hover:bg-[#C9A84C]/10 flex items-center justify-center text-[#8A8580] hover:text-[#C9A84C] transition-all"
-                aria-label="Follow on Facebook"
-              >
-                <Facebook className="w-4 h-4" />
-              </a>
-              <span className="text-[10px] text-[#8A8580] font-light">Join our high-performance community</span>
             </div>
 
           </div>
@@ -129,11 +135,16 @@ export default function Footer() {
         {/* Separator */}
         <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#C9A84C]/25 to-transparent" />
 
-        {/* Bottom Bar Container */}
+        {/* Bottom Bar Container with Google Review Badge */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] text-[#8A8580] font-light">
-          <p className="text-center sm:text-left">
-            &copy; {new Date().getFullYear()} The Executive Image. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-x-6 gap-y-2 text-center sm:text-left">
+            <p>
+              &copy; {new Date().getFullYear()} The Executive Image. All rights reserved.
+            </p>
+            <span className="text-xs text-[#8A8580]">
+              ★★★★★ 5.0 · 101 Google Reviews
+            </span>
+          </div>
           <div className="flex items-center gap-4">
             <span className="font-accent tracking-widest text-[#C9A84C]/80 font-bold">Serving the Treasure Coast Since 2008</span>
           </div>
